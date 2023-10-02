@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "732839104663",
+    "project_id": "newsapp-5b998",
+    "storage_bucket": "newsapp-5b998.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732839104663:android:799da13f73ce804a9159d2",
+        "android_client_info": {
+          "package_name": "com.skysoft.newsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC16LXg2wL0fzadSuxXuAUMQKDn4Dr29-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
