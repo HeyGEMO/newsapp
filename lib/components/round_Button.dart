@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 class RoundButton extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
-  const RoundButton({key,
-  required this.title,
-  required this.onTap
-  }):super(key:key);
+  const RoundButton({key, required this.title, required this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,10 @@ class RoundButton extends StatelessWidget {
           color: Colors.purple,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Text(title, style: TextStyle(color: Colors.white),),
+        child: Text(
+          title,
+          style: const TextStyle(color: Colors.white),
+        ),
       ),
     );
   }

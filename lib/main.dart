@@ -11,12 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
   }
 }
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -25,14 +26,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Timer(Duration(seconds: 5), (){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_)=>HomeScreen()));
+    Timer(const Duration(seconds: 5), () {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (_) => const HomeScreen()));
     });
   }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey,
@@ -40,14 +43,22 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/pigeon1.jpg',height: 150,width: MediaQuery.of(context).size.width*0.9,),
-            SizedBox(height: 10,),
-            Text('NewsApp',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-            SizedBox(
-              height: 20,
-              
+            Image.asset(
+              'assets/pigeon1.jpg',
+              height: 150,
+              width: MediaQuery.of(context).size.width * 0.9,
             ),
-            CircularProgressIndicator(
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              'NewsApp',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.blueGrey),
             )
           ],
